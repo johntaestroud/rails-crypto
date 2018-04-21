@@ -1,7 +1,7 @@
 class HomeController < ApplicationController
   def index
-    #require 'net/http'
-    #require 'json'
+    require 'net/http'
+    require 'json'
     @url = 'https://api.coinmarketcap.com/v1/ticker/'
     @uri = URI(@url)
     @response = Net::HTTP.get(@uri)
@@ -10,5 +10,9 @@ class HomeController < ApplicationController
   end
 
   def about
+  end
+
+  def lookup
+    @symbol = params[:sym]
   end
 end
