@@ -29,5 +29,6 @@ class HomeController < ApplicationController
     if @symbol == ""
       @symbol = "Please enter a currency"
     end
+
   end
 end
